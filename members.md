@@ -4,6 +4,6 @@
 
 ## Students
 
-Tamuna Kheladze
-Monsurah Jokanola
-Tilek Tekinov
+- Tamuna Kheladze
+- Monsurah Jokanola
+- Tilek Tekinov
