@@ -1,0 +1,121 @@
+    body {
+        font-family: system-ui, sans-serif;
+        background: #fafafa;
+        color: #222;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    header,
+    section,
+    footer {
+        max-width: 30rem;
+        margin: 4rem auto;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        order: 3;
+        width: 100%;
+        border-radius: 12px;
+        margin: 1rem 0;
+    }
+
+    h1,
+    h2 {
+        order: 1;
+        text-align: center;
+    }
+
+    p {
+        order: 2;
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    footer {
+        font-size: 0.75rem;
+        color: #555;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    button.dismiss {
+        font-size: 1.5rem;
+        color: #999;
+        cursor: pointer;
+        transition: color 0.2s ease;
+        order: 4;
+    }
+
+    button.dismiss:hover {
+        color: #333;
+    }
+
+    @media (min-width: 1920px) and (orientation: landscape) {
+        body {
+            background: linear-gradient(135deg, #fafafa, #891919);
+            font-size: 1.1rem;
+        }
+
+        section,
+        footer {
+            max-width: 60rem;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        img {
+            flex: 1 1 50%;
+            margin: 0;
+            border-radius: 20px;
+        }
+
+        p {
+            flex: 1 1 50%;
+            font-size: 1.1em;
+        }
+
+        h1,
+        h2 {
+            text-align: left;
+            width: 100%;
+        }
+    }
+
+    /* 2. small phones (≤700px) */
+    @media (max-width: 700px) {
+        body {
+            background: #fff;
+            font-size: 0.95rem;
+        }
+
+        header,
+        section,
+        footer {
+            margin: 2rem auto;
+            padding: 0 0.5rem;
+        }
+
+        h1,
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        img {
+            border-radius: 8px;
+        }
+
+        footer {
+            font-size: 0.65rem;
+        }
+    }
