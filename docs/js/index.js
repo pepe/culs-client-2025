@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const giantCommands = [
-    "Stand still, big fella!",
-    "Bend down, I’m talking to you!",
-    "Hold that mountain, will you?",
-    "Don’t sneeze, the village’s right there!",
-    "Turn your head, the sun’s in my eyes!",
-    "Stop growing, you’re blocking the clouds!",
-    "Catch that thunder before it hits!",
-    "Walk gently, I just planted carrots!",
-    "Show me where the sky begins!",
-    "Wave slower, you’re causing wind warnings!"
-  ];
+  const buildingCommands = [
+  "Hide the library, it's stealing the spotlight!",
+  "Main building, take a break — you’ve worked hard enough!",
+  "Dorms, shh! We know you’re cozy, but not now!",
+  "Canteen, stop tempting everyone with that smell!",
+  "Greenhouse, go water yourself somewhere else!",
+  "Faculty of AgriSciences, stop showing off those windows!",
+  "Sports hall, step aside — we’re talking architecture!",
+  "Rectorate, act humble, you’re too photogenic!",
+  "Old barn, you’re vintage enough, take a nap!",
+  "Campus lake, move over — we can’t see the buildings!"
+];
 
   const sections = document.querySelectorAll('section');
   const removed = []; // keep removed sections here
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // add dismiss button and random title
   sections.forEach(section => {
     const btn = document.createElement('button');
-    const title = giantCommands[Math.floor(Math.random() * giantCommands.length)] + " Be gone!" ;
+    const title = buildingCommands[Math.floor(Math.random() * buildingCommands.length)] + " Be gone!" ;
     btn.className = 'dismiss';
     btn.innerHTML = title;
     section.prepend(btn);
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // create Reset button in footer
   const resetBtn = document.createElement('button');
-  resetBtn.textContent = 'Summon Giants again';
+  resetBtn.textContent = 'Show buildings again';
   resetBtn.id = 'reset';
   document.querySelector('header')?.appendChild(resetBtn);
 
