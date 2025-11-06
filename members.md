@@ -1,9 +1,13 @@
-## Sucker
+## Guru
 
 * pepe
 
 ## Students
 
-- Tamuna Kheladze
-- Monsurah Jokanola
-- Tilek Tekinov
+Tilek Tekinov
+
+luschen
+
+Tamuna Kheladze
+
+Monsurah Jokanola
