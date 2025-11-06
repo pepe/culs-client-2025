@@ -1,1 +1,177 @@
-c
+/* === GLOBAL HIDE FIX === */
+[hidden], .is-hidden {
+  display: none !important;
+}
+
+/* === BASE STYLES === */
+body {
+  font-family: system-ui, sans-serif;
+  background: #fafafa;
+  color: #222;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header,
+section,
+footer {
+  max-width: 30rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  order: 3;
+  width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+h1,
+h2 {
+  order: 1;
+  text-align: center;
+}
+
+p {
+  order: 2;
+}
+
+footer {
+  font-size: 0.75rem;
+  color: #555;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/* === BUTTON STYLES === */
+
+/* Hide buttons – emerald green like an Irish countryside */
+button.dismiss {
+  order: 4;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: #1b5e20;          /* deep emerald green */
+  color: #f4f1de;               /* creamy beige text */
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+  align-self: center;
+}
+
+button.dismiss:hover {
+  background: #145214;          /* darker green */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+button.dismiss:active {
+  background: #0e3e0e;          /* stout-dark green */
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Reset button (Summon Giants again) – golden ale tone */
+#reset {
+  display: block;
+  margin: 2rem auto 3rem;       /* places it near bottom, above footer */
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #b08900;          /* golden ale */
+  color: #fff8dc;               /* light cream text */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+}
+
+#reset:hover {
+  background: #8a6e00;          /* darker gold */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+#reset:active {
+  background: #6e5700;          /* stout-brown tone */
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* === RESPONSIVE === */
+@media (min-width: 1920px) and (orientation: landscape) {
+  body {
+    background: linear-gradient(135deg, #fafafa, #6b3e26);
+    font-size: 1.1rem;
+  }
+
+  section,
+  footer {
+    max-width: 60rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  img {
+    flex: 1 1 50%;
+    margin: 0;
+    border-radius: 20px;
+  }
+
+  p {
+    flex: 1 1 50%;
+    font-size: 1.1em;
+  }
+
+  h1,
+  h2 {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    background: #fff;
+    font-size: 0.95rem;
+  }
+
+  header,
+  section,
+  footer {
+    margin: 2rem auto;
+    padding: 0 0.5rem;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  img {
+    border-radius: 8px;
+  }
+
+  footer {
+    font-size: 0.65rem;
+  }
+
+  /* Make buttons slightly smaller on phones */
+  button.dismiss,
+  #reset {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
