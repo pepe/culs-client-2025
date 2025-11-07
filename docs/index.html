@@ -1,49 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="system">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Meeting with Three Giants</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-  <header>
-    <h1>My Meeting with Three Giants</h1>
-    <p>One loud night , I set out on a walk — and met three giants who changed the way I see the world.</p>
+  <!-- Sticky topbar -->
+  <header class="topbar">
+    <div class="container">
+      <h1 class="site-title">My Meeting with Three Giants</h1>
+      <button id="themeToggle" class="btn" aria-label="Toggle theme">🌗</button>
+    </div>
   </header>
 
-  <section>
-    <h2>The First Giant</h2>
-
-    <img src="img/giant1.jpg" alt="The first giant standing by a mountain" />
-    <p>He spoke slowly, like stone grinding on stone, and asked me what I was building. I said <span>“websites.”</span>
-      He laughed —
-      the kind of laugh that shakes trees.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h2>Three encounters. One night.</h2>
+      <p>One loud night, I set out on a walk — and met three giants who changed the way I see the world.</p>
+      <a href="#giants" class="btn btn-primary">Meet the giants ↓</a>
+    </div>
   </section>
 
-  <section>
-    <h2>The Second Giant</h2>
+  <!-- Cards -->
+  <main id="giants" class="container cards">
+    <article class="card">
+      <figure>
+        <img src="img/giant1.jpg" alt="The first giant standing by a mountain" loading="lazy">
+        <figcaption>The First Giant</figcaption>
+      </figure>
+      <p>He spoke slowly, like stone grinding on stone, and asked me what I was building. I said <span class="hi">“websites.”</span> He laughed — the kind of laugh that shakes trees.</p>
+    </article>
 
-    <img src="img/giant2.jpg" alt="The second giant watching the clouds" />
-    <p>This one didn’t speak at all. He just looked at me, and in that silence I realized how loud my thoughts were.</p>
-  </section>
+    <article class="card">
+      <figure>
+        <img src="img/giant2.jpg" alt="The second giant watching the clouds" loading="lazy">
+        <figcaption>The Second Giant</figcaption>
+      </figure>
+      <p>This one didn’t speak at all. He just looked at me, and in that silence I realized how loud my thoughts were.</p>
+    </article>
 
-  <section>
-    <h2>The Third Giant</h2>
+    <article class="card">
+      <figure>
+        <img src="img/giant3.jpg" alt="The third giant walking away into the mist" loading="lazy">
+        <figcaption>The Third Giant</figcaption>
+      </figure>
+      <p>He gave me no advice. Only a nod, as if to say: keep going. The path is yours now.</p>
+    </article>
+  </main>
 
-    <img src="img/giant3.jpg" alt="The third giant walking away into the mist" />
-    <p>He gave me no advice. Only a nod, as if to say: keep going. The path is yours now.</p>
-  </section>
-
-  <footer>
-    <p>© 2025 – A simple story told with HTML, CSS, and a little curiosity.</p>
+  <footer class="footer">
+    <div class="container">
+      <small>© 2025 — A simple story told with HTML, CSS, and a little curiosity.</small>
+    </div>
   </footer>
 
-  <script src="js/index.js">
-
-  </script>
+  <script src="js/index.js"></script>
 </body>
-
 </html>
+
