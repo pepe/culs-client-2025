@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Pillars Example - Expanded</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Web Dev Core Technologies - Advanced Demo</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#interactivity">Interactivity</a></li>
+                <li><a href="#input">Input</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-box">
+            <h2>The Three Pillars</h2>
+            <p>This page demonstrates the crucial separation between HTML, CSS, and JavaScript, ensuring a clean, maintainable codebase.</p>
+        </section>
+
+        <section class="content-box" id="features">
+            <h2>Core Features List</h2>
+            <p>A demonstration of semantic lists, ready for custom styling.</p>
+            <ol>
+                <li>Semantic Markup (HTML)</li>
+                <li>Responsive Design (CSS)</li>
+                <li>DOM Manipulation (JavaScript)</li>
+                <li>Separation of Concerns (Best Practice)</li>
+            </ol>
+            <p class="note">This note will be styled differently to draw attention.</p>
+        </section>
+
+        <section class="content-box interaction-box" id="interactivity">
+            <h2>Interactive Section (Click to Toggle State)</h2>
+            <button id="colorChangeBtn" type="button">Click Me to Change Color</button>
+            <p id="messageArea">Button not yet clicked.</p>
+        </section>
+        <section class="content-box" id="data-table">
+    <h2>Tabular Data Display</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Technology</th>
+                <th>Role</th>
+                <th>Focus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>Structure</td>
+                <td>Content & Semantics</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Presentation</td>
+                <td>Style & Layout</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Behavior</td>
+                <td>Interactivity & Logic</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section class="content-box" id="modal-section">
+    <h2>Modal Demonstration</h2>
+    <p>Click the button below to trigger a pop-up window using JavaScript.</p>
+    <button id="openModalBtn" type="button">Open Hidden Modal</button>
+</section>
+
+<div id="simpleModal" class="modal-overlay">
+    <div class="modal-content">
+        <h3>Success!</h3>
+        <p>This box was hidden by default, and made visible using JavaScript and complex CSS positioning.</p>
+        <button id="closeModalBtn" type="button">Close</button>
+    </div>
+</div>
+        <section class="content-box" id="input">
+            <h2>User Input Form</h2>
+            <form id="dataForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" id="submitBtn">Submit Data</button>
+            </form>
+            <p id="formFeedback"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Separation of Concerns Expanded Demo</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

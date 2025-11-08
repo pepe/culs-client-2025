@@ -1,0 +1,248 @@
+/* Universal Border-Box Reset (Crucial for reliable sizing/alignment) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------ */
+/* 1. BODY & LAYOUT FIXES (Ensuring Footer doesn't cut off content) */
+/* ------------------------------------------------------------------ */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    /* FIX: Margin to ensure content clears the fixed footer */
+    margin-bottom: 60px; 
+}
+
+main {
+    max-width: 1100px; /* Increased width to fit new content */
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex; /* Use Flexbox for main content layout */
+    flex-wrap: wrap; /* Allows sections to wrap to the next row */
+    gap: 20px; 
+}
+
+.content-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* NEW: All boxes should take up about half the main width, wrapping when needed */
+    flex: 1 1 calc(50% - 10px); 
+    min-width: 350px; /* Ensures boxes don't get too narrow */
+}
+
+/* ------------------------------------------------------------------ */
+/* 2. HEADER & NAVIGATION STYLING */
+/* ------------------------------------------------------------------ */
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+/* ------------------------------------------------------------------ */
+/* 3. FEATURE LIST & FORM ALIGNMENT (from previous fixes) */
+/* ------------------------------------------------------------------ */
+
+/* Feature List */
+#features ol {
+    padding-left: 25px;
+}
+
+/* Form Group Alignment */
+.form-group {
+    margin-bottom: 15px; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px; 
+    color: #007bff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Submit Button */
+#submitBtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: #c82333;
+}
+
+/* ------------------------------------------------------------------ */
+/* 4. NEW CONTENT STYLING (Table, Figure) */
+/* ------------------------------------------------------------------ */
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+/* Figure Styling */
+.web-figure {
+    float: left; /* Float image to the left of the text */
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+.web-figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.web-figure figcaption {
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Clear the float after the figure */
+#image-demo p {
+    clear: both;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* 5. MODAL STYLING (Hidden by default) */
+/* ------------------------------------------------------------------ */
+
+.modal-overlay {
+    position: fixed; /* Fixed position relative to viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    display: none; /* KEY: Hidden by default. JavaScript will change this. */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it is on top of everything else */
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Close Modal Button */
+#closeModalBtn {
+    margin-top: 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+/* 6. JAVASCRIPT STATE CLASSES & FOOTER (Footer fix) */
+/* ------------------------------------------------------------------ */
+
+/* Footer Styling (Fixed position) */
+footer {
+    text-align: center;
+    padding: 10px 0; /* Adjusted padding */
+    background-color: #222; /* Made darker for contrast */
+    color: #aaa;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    /* No explicit height is set, allowing padding to define size */
+}
+
+footer p {
+    margin: 0; /* Prevents paragraph margin from expanding the footer */
+    font-size: 0.9em;
+}
+
+
+/* JavaScript Interaction Classes */
+.state-yellow {
+    background-color: #fff3cd !important;
+}
+
+.state-green {
+    background-color: #d4edda !important;
+}
+
+/* JavaScript Modal Visibility Class */
+.is-visible {
+    display: flex; /* Overrides the default 'display: none' */
+}
